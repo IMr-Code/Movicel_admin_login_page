@@ -6,28 +6,28 @@
     <link rel="shortcut icon" href="https://ccplus.movicel.co.ao/ccplusv2/public/assets/favicon/favicon.png">
     <title>CCPLUSV2 : log In</title>
     <!--Core CSS -->
-	
-	<link href="css/bootstrap.min.css" rel="stylesheet">	
-	
-	<link href="css/adminstyle.css" rel="stylesheet">   
-	<link href="css/bootstrap-reset.css" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/adminstyle.css" rel="stylesheet">   
+        <link href="css/bootstrap-reset.css" rel="stylesheet">
     <!--clock css-->
-    <link href="css/style.css" rel="stylesheet">			
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<link href="css/style-responsive.css" rel="stylesheet">
-	
-	<link rel="stylesheet" type="text/css" media="all" href="css/jquery-ui.min.css">
+    <link href="css/style.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <link href="css/style-responsive.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" media="all" href="css/jquery-ui.min.css">
   <link href="css/jquery-confirm.css" rel="stylesheet">
 
 <!--dynamic table-->
     <link href="css/demo_page.css" rel="stylesheet">
     <link href="css/demo_table.css" rel="stylesheet">
     <link rel="stylesheet" href="css/DT_bootstrap.css">
-    <link href="css/bootstrap-chosen.css" rel="stylesheet">	
-    <link href="css/jquery.growl.css" rel="stylesheet">	
-    <link href="css/tautocomplete.css" rel="stylesheet">	
+    <link href="css/bootstrap-chosen.css" rel="stylesheet">
+    <link href="css/jquery.growl.css" rel="stylesheet">
+    <link href="css/tautocomplete.css" rel="stylesheet">
     
-  	<link href="css/checkboxes.css" rel="stylesheet"> 
+        <link href="css/checkboxes.css" rel="stylesheet"> 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]>
     <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -44,9 +44,9 @@
 .panel-body {
     padding: 10px;
     border: 1px;
-	border-style: solid;
-	border-color: #efefef;
-	background: #ffffff;
+        border-style: solid;
+        border-color: #efefef;
+        background: #ffffff;
 }
 .panel{font-size: 12px;}
 /*.form-control{font-size: 12px;height: auto;padding: 5px;}
@@ -56,7 +56,7 @@
 .tab-close {
     
     margin: -10px;
-	cursor: pointer;
+        cursor: pointer;
     color: tomato;
 }
 /*======Jquery-ui.min========*/
@@ -68,7 +68,7 @@
 }
 </style>
 <style type="text/css">
-    .btn-refresh:after {	
+    .btn-refresh:after {
     font-family: 'FontAwesome';
     content: '\f021';
     padding-left: 5px;
@@ -171,63 +171,26 @@
 
   
     <div class="container">
-      <form class="form-signin" action="" id="login_form">
+      <form class="form-signin" method="GET" action="process.php" id="login_form">
   
         <h2 class="form-signin-heading"><img src="images/admin64.png" alt="CCPlusV2" style="    max-width: 222px;"></h2>       
            <h4 class="form-signin-heading" style="text-align: center;">Admin Area</h4>
        <div id="div_result"></div>
        <div class="err_msg1" style="display:none;"></div>
         <div class="login-wrap">
-            <div class="user-login-info">		
-            	<!--		
-            	<div>
-                <label for="province_id">Area</label>
-                <select name="province_id" id="province_id" class="form-control chosen-select">
-<option value="" selected="selected">Select One</option>
-<option value="2">Bengo</option>
-<option value="1">Benguela</option>
-<option value="5">Bie</option>
-<option value="6">Cabinda</option>
-<option value="10">Cunene</option>
-<option value="11">Huambo</option>
-<option value="12">Huíla</option>
-<option value="7">Kuando Kubango</option>
-<option value="8">Kwanza Norte</option>
-<option value="9">Kwanza Sul</option>
-<option value="13">Luanda</option>
-<option value="14">Lunda Norte</option>
-<option value="15">Lunda Sul</option>
-<option value="16">Malange</option>
-<option value="17">Moxico</option>
-<option value="18">Namibe</option>
-<option value="19">Uíge</option>
-<option value="20">Zaire</option>
-</select>
-            	</div>   
-            	<div>   
-                <label for="locality_id">Locality</label>
-                <select name="location_id" id="location_id" class="form-control chosen-select">
-<option value="0"></option>
-</select>
-             	</div>  
-             	-->
-             	<div> 
+            <div class="user-login-info">
+                <div> 
                <label for="user_ids">log In</label>
-                <input type="text" class="form-control" placeholder="Username" id="username" name="username" value="" autofocus="" style="font-size:14px;color:#000;">
+<input type="text" class="form-control" placeholder="Username" id="username" name="nome" value="" autofocus="" style="font-size:14px;color:#000;">
                 </div>  
-					<div>
+                                        <div>
                 <label for="user_ids">Password</label>
-                <input type="password" class="form-control" placeholder="Password" id="password" name="password" value="" style="font-size:14px;color:#000;">
+<input type="password" class="form-control" placeholder="Password" id="password" name="senha" value="" style="font-size:14px;color:#000;">
                 </div>  
             </div>
             <label style="font-weight:normal;">
-               <!-- <input type="checkbox" value="remember-me"> Remember me -->
-                <!-- <span class="pull-left">
-                    <a data-toggle="modal" href="#myForgotpassword" style="text-decoration:none;"> Forgot Password?</a>
-                </span>
-                -->
             </label> 
-            <button class="btn btn-lg btn-info btn-block" type="button" id="login_btn">Sign in</button>
+            <input class="btn btn-lg btn-info btn-block" type="submit" value="Entrar" id="login_btn">
         </div>
       </form>
      
@@ -265,9 +228,7 @@
 
     
 <!--Core js-->
-<script src="js/jquery-2.1.4.min.js" type="text/javascript"></script> 
-<script src="js/jquery-ui.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js"></script>
+
 
 <script src="js/jquery-migrate.js"></script>
  <!--dynamic table-->
@@ -278,14 +239,13 @@
 <script src="js/jquery.nicescroll.js"></script>
 <script src="js/scripts.js"></script>
 
-<!-- chosen select -->
-<script src="js/chosen.jquery.js"></script>
+<!-- chosen select <script src="js/chosen.jquery.js"></script>
 <script src="js/jquery.growl.js"></script>
 <script src="js/tautocomplete.js"></script>
 <script src="js/bootstrap-filestyle.js"></script>
 <script src="js/jquery-confirm.js"></script>
 
-<script src="js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="js/jquery.dcjqaccordion.2.7.js"></script>-->
 <script type="text/javascript">
  $.fn.extend({
     treed: function (o) {
@@ -400,15 +360,15 @@
 
             // Inject the icon if applicable
             if ($button.find('.state-icon').length == 0) {
-                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
             }
         }
         init();
     });
    
-    	        	
-	$(".leftside-navigation").niceScroll({
-	     cursorwidth: 10,       
+                
+        $(".leftside-navigation").niceScroll({
+             cursorwidth: 10,       
         cursorborder: "1px solid #cccccc",
         cursorcolor: "#1FB5AD",
         cursoropacitymin: 0.3,
@@ -417,160 +377,160 @@
         emulatetouch :true    
    });
 
-	$('.sub-menu').live('click', function() {		
-  	 	$(".leftside-navigation").niceScroll().resize();  		 		
-    	$('#ascrail2000').show();          
-	});
-	
-		
-   	
+        $('.sub-menu').live('click', function() {
+                $(".leftside-navigation").niceScroll().resize();        
+        $('#ascrail2000').show();          
+        });
+
+
+   
   function check_login() {
-     	
-     		$.ajax({
-				type: "POST",
-				url: "https://ccplus.movicel.co.ao/ccplusv2/home/check_login",				
-				success:function(response)
-				{					
-					var data_result = $.parseJSON(response);				 				 				 	
-				 	if (data_result["status"] == 1) 
-				 	{				 		
-						$.growl.notice({ message: data_result["status_msg"] }) 									
-				 		setTimeout(function() {				 				 									
-				 				window.location.href = "https://ccplus.movicel.co.ao/ccplusv2/login";		
-								}, 3000);					
-				 	}				 					 					
-				}				
-			});
-	}
-	
-	function check_change_password(stat)
-	{		
-		var str_title = 'Your password expire days :  '+ stat;
-		//var str_title = 'Your password will expire within days '+ stat;
-		if(stat=='0'){
-		//str_title = 'Your password will expire today !'
-		str_title = 'Your password will expire today';
-		}
-		$.confirm({
-			    title: str_title,
-			    content: 'Change the password now',
-			    type: 'red',
-			    typeAnimated: true,
-			    buttons: {
-			      Ok : {
-			            	btnClass: 'btn-danger',
-						        action: function()
-						            {						        												 
-											$.ajax({
-												type: "POST",
-												url: "https://ccplus.movicel.co.ao/ccplusv2/welcome/check_change_password",
-												data: {page_action :"REDIRECT"},				
-												success:function(response)
-												{											 		
-													$('#loader_overlay_text').removeClass("loader-small");					
-													document.getElementById("loader_overlay").style.display = "none";																												
-													var data_result = $.parseJSON(response);
-												 	if (data_result["status"] == 1) 
-												 	{					 		
-												 		//$.growl.notice({ message: data_result["status_msg"] });					 		
-														window.location = "https://ccplus.movicel.co.ao/ccplusv2/change_password";			 		
-												 	}
-												 	else
-												 	{
-												 		//$.growl.error({ message: data_result["status_msg"] });												 							 							 							 		
-												 	}				 																		
-												},
-												error: function(result)
-												{
-													$('#loader_overlay_text').removeClass("loader-small");					
-													document.getElementById("loader_overlay").style.display = "none";
-												   $.growl.error({ message: "Time out Error " });
-												},
-												fail:(function(status) {
-												   $('#loader_overlay_text').removeClass("loader-small");					
-													document.getElementById("loader_overlay").style.display = "none";
-												   $.growl.error({ message: "Fail" });
-												}),
-												beforeSend:function(d){						
-												 	$('#loader_overlay_text').addClass("loader-small");
-												 	document.getElementById("loader_overlay").style.display = "block";
-												},
-												timeout: "3000"	
-											});
-						            }
-					  },
-			        close : {
-			            	btnClass: 'btn-danger',
-						        action: function()
-						            {						        												 
-											$.ajax({
-												type: "POST",
-												url: "https://ccplus.movicel.co.ao/ccplusv2/welcome/check_change_password",
-												data: {page_action :"REMOVE"},				
-												success:function(response)
-												{											 		
-													$('#loader_overlay_text').removeClass("loader-small");					
-													document.getElementById("loader_overlay").style.display = "none";																												
-													var data_result = $.parseJSON(response);
-												 	if (data_result["status"] == 1) 
-												 	{		
-												 		//window.location = "https://ccplus.movicel.co.ao/ccplusv2/welcome";			 		
-												 		//$.growl.notice({ message: data_result["status_msg"] });					 														 						 		
-												 	}
-												 	else
-												 	{
-												 		//$.growl.error({ message: data_result["status_msg"] });					 							 							 		
-												 	}				 																		
-												},
-												error: function(result)
-												{
-													$('#loader_overlay_text').removeClass("loader-small");					
-													document.getElementById("loader_overlay").style.display = "none";
-												   $.growl.error({ message: "Time out Error " });
-												},
-												fail:(function(status) {
-												   $('#loader_overlay_text').removeClass("loader-small");					
-													document.getElementById("loader_overlay").style.display = "none";
-												   $.growl.error({ message: "Fail" });
-												}),
-												beforeSend:function(d){						
-												 	$('#loader_overlay_text').addClass("loader-small");
-												 	document.getElementById("loader_overlay").style.display = "block";
-												},
-												timeout: "3000"	
-											});
-						            }
-					  }
-			    }
-			}); 
-	}
+     
+                $.ajax({
+                                type: "POST",
+                                url: "https://ccplus.movicel.co.ao/ccplusv2/home/check_login",
+                                success:function(response)
+                                {
+                                        var data_result = $.parseJSON(response);                                                                 
+                                        if (data_result["status"] == 1) 
+                                        {                               
+                                                $.growl.notice({ message: data_result["status_msg"] }) 
+                                                setTimeout(function() {  
+                                                                window.location.href = "https://ccplus.movicel.co.ao/ccplusv2/login";
+                                                                }, 3000);
+                                        }                                
+                                }
+                        });
+        }
+
+        function check_change_password(stat)
+        {
+                var str_title = 'Your password expire days :  '+ stat;
+                //var str_title = 'Your password will expire within days '+ stat;
+                if(stat=='0'){
+                //str_title = 'Your password will expire today !'
+                str_title = 'Your password will expire today';
+                }
+                $.confirm({
+                            title: str_title,
+                            content: 'Change the password now',
+                            type: 'red',
+                            typeAnimated: true,
+                            buttons: {
+                              Ok : {
+                                        btnClass: 'btn-danger',
+                                                        action: function()
+                                                            {                                                                                   
+                                                                       $.ajax({
+                                                                       type: "POST",
+                                                                       url: "https://ccplus.movicel.co.ao/ccplusv2/welcome/check_change_password",
+                                                                       data: {page_action :"REDIRECT"},
+                                                                       success:function(response)
+                                                                       { 
+                                                                       $('#loader_overlay_text').removeClass("loader-small");
+                                                                       document.getElementById("loader_overlay").style.display = "none";
+                                                                       var data_result = $.parseJSON(response);
+                                                                        if (data_result["status"] == 1) 
+                                                                        {                                        
+                                                                        //$.growl.notice({ message: data_result["status_msg"] });               
+                                                                       window.location = "https://ccplus.movicel.co.ao/ccplusv2/change_password";                        
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                        //$.growl.error({ message: data_result["status_msg"] });                                                                                        
+                                                                        }                                
+                                                                       },
+                                                                       error: function(result)
+                                                                       {
+                                                                       $('#loader_overlay_text').removeClass("loader-small");
+                                                                       document.getElementById("loader_overlay").style.display = "none";
+                                                                          $.growl.error({ message: "Time out Error " });
+                                                                       },
+                                                                       fail:(function(status) {
+                                                                          $('#loader_overlay_text').removeClass("loader-small");
+                                                                       document.getElementById("loader_overlay").style.display = "none";
+                                                                          $.growl.error({ message: "Fail" });
+                                                                       }),
+                                                                       beforeSend:function(d){
+                                                                        $('#loader_overlay_text').addClass("loader-small");
+                                                                        document.getElementById("loader_overlay").style.display = "block";
+                                                                       },
+                                                                       timeout: "3000"
+                                                                       });
+                                                            }
+                                          },
+                                close : {
+                                        btnClass: 'btn-danger',
+                                                        action: function()
+                                                            {                                                                                   
+                                                                       $.ajax({
+                                                                       type: "POST",
+                                                                       url: "https://ccplus.movicel.co.ao/ccplusv2/welcome/check_change_password",
+                                                                       data: {page_action :"REMOVE"},
+                                                                       success:function(response)
+                                                                       { 
+                                                                       $('#loader_overlay_text').removeClass("loader-small");
+                                                                       document.getElementById("loader_overlay").style.display = "none";
+                                                                       var data_result = $.parseJSON(response);
+                                                                        if (data_result["status"] == 1) 
+                                                                        {
+                                                                        //window.location = "https://ccplus.movicel.co.ao/ccplusv2/welcome";    
+                                                                        //$.growl.notice({ message: data_result["status_msg"] });                                                                
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                        //$.growl.error({ message: data_result["status_msg"] });                                                                         
+                                                                        }                                
+                                                                       },
+                                                                       error: function(result)
+                                                                       {
+                                                                       $('#loader_overlay_text').removeClass("loader-small");
+                                                                       document.getElementById("loader_overlay").style.display = "none";
+                                                                          $.growl.error({ message: "Time out Error " });
+                                                                       },
+                                                                       fail:(function(status) {
+                                                                          $('#loader_overlay_text').removeClass("loader-small");
+                                                                       document.getElementById("loader_overlay").style.display = "none";
+                                                                          $.growl.error({ message: "Fail" });
+                                                                       }),
+                                                                       beforeSend:function(d){
+                                                                        $('#loader_overlay_text').addClass("loader-small");
+                                                                        document.getElementById("loader_overlay").style.display = "block";
+                                                                       },
+                                                                       timeout: "3000"
+                                                                       });
+                                                            }
+                                          }
+                            }
+                        }); 
+        }
  function formatAjxErrorMessage(jqXHR, exception) 
  {
-		var ret_msg = { "msg":"","code":"" };								
-		if (jqXHR.status === 0) {
-		      msg = 'Not connect.\n Verify Network.';
-		      var ret_msg = { "msg": msg,"code": 0 };			
-		} else if (jqXHR.status == 404) {
-		      msg = 'Requested page not found. [404]';
-		      var ret_msg = { "msg": msg,"code": 404 };
-		} else if (jqXHR.status == 500) {
-		      msg = 'Internal Server Error [500].';
-		      var ret_msg = { "msg": msg,"code": 500 };
-		} else if (exception === 'parsererror') {
-		      msg = 'Requested JSON parse failed.';
-		      var ret_msg = { "msg": msg,"code": 500 };
-		} else if (exception === 'timeout') {
-		      msg = 'Time out error.';
-		      var ret_msg = { "msg": msg,"code": 504 };
-		} else if (exception === 'abort') {
-		      msg = 'Ajax request aborted.';
-		      var ret_msg = { "msg": msg,"code": 408 };
-		} else {
-		      msg = 'Uncaught Error.\n' + jqXHR.responseText;
-		      var ret_msg = { "msg": msg,"code": 506 };
-		}		  
-	return ret_msg;
- }	
+                var ret_msg = { "msg":"","code":"" };
+                if (jqXHR.status === 0) {
+                      msg = 'Not connect.\n Verify Network.';
+                      var ret_msg = { "msg": msg,"code": 0 };
+                } else if (jqXHR.status == 404) {
+                      msg = 'Requested page not found. [404]';
+                      var ret_msg = { "msg": msg,"code": 404 };
+                } else if (jqXHR.status == 500) {
+                      msg = 'Internal Server Error [500].';
+                      var ret_msg = { "msg": msg,"code": 500 };
+                } else if (exception === 'parsererror') {
+                      msg = 'Requested JSON parse failed.';
+                      var ret_msg = { "msg": msg,"code": 500 };
+                } else if (exception === 'timeout') {
+                      msg = 'Time out error.';
+                      var ret_msg = { "msg": msg,"code": 504 };
+                } else if (exception === 'abort') {
+                      msg = 'Ajax request aborted.';
+                      var ret_msg = { "msg": msg,"code": 408 };
+                } else {
+                      msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                      var ret_msg = { "msg": msg,"code": 506 };
+                }                 
+        return ret_msg;
+ }
 </script>
 
 
@@ -587,35 +547,35 @@
 
       $("#login_btn").on("click", function(e) {
           e.preventDefault();
-		  if($.trim($("#username").val()) == "")
-		  {
-			  $(".err_msg1").text("Username is Empty!!!");
+                  if($.trim($("#username").val()) == "")
+                  {
+                          $(".err_msg1").text("Username is Empty!!!");
                         $(".err_msg1").show();
                         $(".err_msg1").css("color", "red");
                         $(".err_msg1").show(500);
                          setTimeout(function() {
                                 $(".err_msg1").hide(500);
                             }, 3000);
-		  }
-		  else if($.trim($("#password").val()) == "")
-		  {
-			  $(".err_msg1").text("Password is Empty!!!");
+                  }
+                  else if($.trim($("#password").val()) == "")
+                  {
+                          $(".err_msg1").text("Password is Empty!!!");
                         $(".err_msg1").show();
                         $(".err_msg1").css("color", "red");
                         $(".err_msg1").show(500);
                          setTimeout(function() {
                                 $(".err_msg1").hide(500);
                             }, 3000);
-		  }
-		  else
-		  {
-			  $.post("https://ccplus.movicel.co.ao/ccplusv2/login/check_login", $("#login_form").serialize(),
+                  }
+                  else
+                  {
+                          $.post("https://ccplus.movicel.co.ao/ccplusv2/login/check_login", $("#login_form").serialize(),
                 function(response){                                           
                     var data = $.parseJSON(response);                                     
                       //console.log(data);                      
                if (data["status"] == 1)
-					{
-						$("#password").val('');
+                                        {
+                                                $("#password").val('');
                         $(".err_msg1").text("Access Denied!!!");
                         $(".err_msg1").show();
                         $(".err_msg1").css("color", "red");
@@ -624,9 +584,9 @@
                                 $(".err_msg1").hide(500);
                             }, 3000);
                }
-					else if (data["status"] == 2) 
-					{
-						$("#password").val('');
+                                        else if (data["status"] == 2) 
+                                        {
+                                                $("#password").val('');
                         $(".err_msg1").text("Password or Username mismatch");
                         $(".err_msg1").show();
                         $(".err_msg1").css("color", "red");
@@ -636,8 +596,8 @@
                             }, 3000);
                 }
                 else if (data["status"] == 3) 
-					 {
-						$("#password").val('');
+                                         {
+                                                $("#password").val('');
                         $(".err_msg1").text("The user account is blocked.");
                         $(".err_msg1").show();
                         $(".err_msg1").css("color", "red");
@@ -647,8 +607,8 @@
                             }, 3000);
                 }
                 else if (data["status"] == 4) 
-					 {
-						$("#password").val('');
+                                         {
+                                                $("#password").val('');
                         $(".err_msg1").text("User access  not possible via internet");
                         $(".err_msg1").show();
                         $(".err_msg1").css("color", "red");
@@ -661,7 +621,7 @@
                       window.location = "https://ccplus.movicel.co.ao/ccplusv2/welcome";
                 }
                 });        
-		  }
+                  }
             
          });
 
@@ -697,10 +657,10 @@
     </script>
     
 <script type="text/javascript">
-	$(document).ready(function()
-	{
+        $(document).ready(function()
+        {
    
-    	$('#province_id').on('change',function(){
+        $('#province_id').on('change',function(){
         var provinceID = $(this).val();
         if(provinceID){
             $.ajax({
@@ -710,31 +670,31 @@
                 success:function(html){
                     $('#location_id').html(html);
                     $('#location_id').trigger("chosen:updated");        
-						  $('#div_result').html("");
+                                                  $('#div_result').html("");
                 },
-					 error: function(result)
-					 {
-					   $("#div_result").html("Error");
-					 },
-					 fail:(function(status) {
-					   $("#div_result").html("Fail");
-					 }),
-					 beforeSend:function(d){
-					 	$('#div_result').html("<center><strong style='color:red'>Please Wait...<br><i class='fa fa-spinner fa-spin' aria-hidden='true'></i></strong></center>");
-					 }
+                                         error: function(result)
+                                         {
+                                           $("#div_result").html("Error");
+                                         },
+                                         fail:(function(status) {
+                                           $("#div_result").html("Fail");
+                                         }),
+                                         beforeSend:function(d){
+                                                $('#div_result').html("<center><strong style='color:red'>Please Wait...<br><i class='fa fa-spinner fa-spin' aria-hidden='true'></i></strong></center>");
+                                         }
 
             }); 
         }else{
             $('#location_id').html('<option value="">Select country first</option>'); 
         }
             
-    	});
+        });
     
    });
    $(function() {
         $('.chosen-select').chosen({scroll_to_highlighted: true});
         $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
-    });		
+    });
 
 </script>
 
